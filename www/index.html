@@ -1,0 +1,102 @@
+
+<html lang="en" >
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+    <script type="text/javascript" src="lib/jquery-2.2.4.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBVm8fsnxCwgoSncc2v-mOSXUhZ89eKy7k",
+        authDomain: "udacityrestaurantreviews.firebaseapp.com",
+        databaseURL: "https://udacityrestaurantreviews.firebaseio.com",
+        storageBucket: "",
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    
+    <script src="app/app.js"></script>
+    
+    <title>Restaurant Reviews</title>
+    <style>
+
+    input, textarea, body {
+      max-width:100%
+    }
+    
+    </style>
+  </head>
+  <body ng-app="RestaurantReviews" ng-controller="appCtrl">
+
+
+      <md-toolbar aria-label="Restaurant Reviews Toolbar">
+      <div class="md-toolbar-tools">
+        <span flex></span>
+        <h2>
+          <span>Restaurant Reviews</span>
+        </h2>
+        <span flex></span>
+      </div>
+    </md-toolbar>
+      <form>
+        <md-input-container class="md-block">
+            <label>Search Restaurant</label>
+            <input id="searchString" type="text" name="searchString" ng-model="searchString" aria-label="Search String" autofocus>
+        </md-input-container>
+      </form>
+      <md-menu>
+        <md-button aria-label="filter restaurant by star rating" class="md-fab md-primary" ng-click="$mdOpenMenu($event)">
+          <md-icon>star</md-icon>
+        </md-button>
+        <md-menu-content width="2">
+          <md-menu-item ng-repeat="rating in starRatings">
+            <md-button ng-click="selectStar(rating)" ng-disabled="rating == starSelected" aria-label="rating">
+              {{rating}}
+            </md-button>
+          </md-menu-item>
+         </md-menu-content>
+      </md-menu>
+
+
+      <md-menu>
+        <md-button aria-label="filter restaurant by location" class="md-fab md-primary" ng-click="$mdOpenMenu($event)">
+          <md-icon>map</md-icon>
+        </md-button>
+        <md-menu-content width="2">
+          <md-menu-item ng-repeat="location in locationArray">
+            <md-button ng-click="selectLocation(location)" ng-disabled="location == locationSelected" aria-label="location">
+              {{location}}
+            </md-button>
+          </md-menu-item>
+         </md-menu-content>
+      </md-menu>
+
+<!--   -->
+
+      <span flex></span>
+      <md-button class="md-fab" aria-label="Execute Search">
+           <md-icon>search</md-icon>
+      </md-button>
+
+
+    </md-content>
+  </body>
+</html>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->

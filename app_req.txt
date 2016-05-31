@@ -1,0 +1,74 @@
+Restaurant Reviews App
+Prepare for this project with Accessible Web Applications (COMING SOON).
+Requirements
+You must build a restaurant reviews application with a focus on accessibility. The application must include restaurant names, a photograph, address and operating hours for each restaurant along with reviews, including the name of the reviewer, date of review, 5-star rating system, and comments. The application must include an application header, a menu providing multiple ways to filter the restaurants. When viewing a specific restaurant, current reviews must be displayed along with a form for the user to submit their own review.
+Review the evaluation rubric early and often.
+
+
+Project Submission
+You will develop a restaurant review application with a focus on accessibility. You will remotely access JSON files containing restaurant information (including name, a photograph, address, cuisine type and operating hours) as well as JSON files containing review information for each restaurant (name of reviewer, date of review, 5-star rating and comments). The reviews application must include an application header, and a menu providing multiple ways to filter the restaurants (by cuisine, by location, etc). When viewing a specific restaurant, current reviews must be displayed along with a form for the user to submit their own review.
+Supporting Course: Web Accessibility coming May 2016.
+Evaluation
+Your project will be evaluated by a Udacity reviewer according to this rubric. Be sure to review it thoroughly before you submit. All criteria must "meet specifications" in order to pass.
+Submission
+Once you've completed your project, return to your Udacity Homepage and use the Submit Project button to submit a GitHub repository or .zip archive.
+
+
+PROJECT SPECIFICATION
+Restaurant Reviews
+
+Completion
+
+CRITERIA
+MEETS SPECIFICATIONS
+Completion
+
+App includes all requirements, including restaurant information, customer reviews and a new review form.
+
+Responsiveness
+
+CRITERIA
+MEETS SPECIFICATIONS
+Responsiveness
+
+App is equally functional on mobile and desktop, using responsive design to ensure its displayed in a useable state.
+
+Accessibility: Images
+
+CRITERIA
+MEETS SPECIFICATIONS
+Accessibility: Images
+
+All content-related images include appropriate alternate text.
+
+Accessibility: Focus
+
+CRITERIA
+MEETS SPECIFICATIONS
+Accessibility: Focus
+
+Focus is appropriately managed allowing users to noticeably tab through each of the important elements of the page. Modal or interstitial windows appropriately lock focus.
+
+Accessibility: Elements
+
+CRITERIA
+MEETS SPECIFICATIONS
+Accessibility: Elements
+
+Elements on the page use the appropriate semantic elements. For those elements in which a semantic element is not available, appropriate ARIA roles are defined.
+
+Accessibility: Design
+
+CRITERIA
+MEETS SPECIFICATIONS
+Accessibility: Design
+
+Color selections and contrast are made with accessibility in mind.
+
+App Delivery
+
+CRITERIA
+MEETS SPECIFICATIONS
+App Delivery: Build Process
+
+App includes a build process (such as Grunt or Gulp). Assets are minimized and concatenated as appropriate.
